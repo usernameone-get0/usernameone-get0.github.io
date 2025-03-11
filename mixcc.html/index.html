@@ -9,16 +9,7 @@
     <link rel="shortcut icon" href="../ico.ico" type="image/x-icon">
     
 
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "kJf_IiNzVuWnBjgPG",
-      });
-   })();
-</script>
+
 
 <body class="" style="">
     <script>
@@ -4785,20 +4776,25 @@
     var userId = "kJf_IiNzVuWnBjgPG";
     var templateId = "template_qx8cya8";
 
-    var data = {
-        service_id: serviceID,
-        template_id: templateId,
-        user_id: userId,
-        template_params: templateData
+
+        var data = {
+        service_id: 'YOUR_SERVICE_ID',
+        template_id: 'YOUR_TEMPLATE_ID',
+        user_id: 'YOUR_PUBLIC_KEY',
+        template_params: {
+        'username': 'James',
+        'g-recaptcha-response': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...'
     };
 
     $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
         type: 'POST',
         data: JSON.stringify(data),
         contentType: 'application/json'
-    }).done(function () {
-    }).fail(function (error) {
-    });
+}).done(function() {
+    alert('Your mail is sent!');
+}).fail(function(error) {
+    alert('Oops... ' + JSON.stringify(error));
+});
 }
         function firstFormHandle(event) {
             event.preventDefault()

